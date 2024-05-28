@@ -1,16 +1,27 @@
 ---
+import { Icon } from 'astro-icon/components';
+import { Button } from '@components/ui/button';
 
+import MainLayout from '@/layouts/MainLayout.astro';
+import Hero from '@/components/Hero.astro';
+import Insights from '@/components/Insights.astro';
+import Pricing from '@/components/Pricing.astro';
+import Subscribe from '@/components/Subscribe.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout>
+  <main class="mx-auto flex min-h-screen w-screen flex-col overflow-x-hidden">
+    <Hero />
+    <Insights />
+    <Pricing />
+    <div class="group relative mx-auto mb-8 w-fit rounded-3xl">
+      <Button className="text-md rounded-3xl">Start for Free</Button>
+      <div
+        class="absolute inset-0 -z-10 h-full w-full rounded-3xl bg-primary blur-sm duration-1000 group-hover:blur"
+      >
+      </div>
+    </div>
+
+    <Subscribe />
+  </main>
+</MainLayout>
