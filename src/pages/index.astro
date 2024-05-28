@@ -1,4 +1,7 @@
 ---
+import { Icon } from 'astro-icon/components';
+import { Button } from '@components/ui/button';
+
 import MainLayout from '@/layouts/MainLayout.astro';
 import Hero from '@/components/Hero.astro';
 import Scroll from '@/components/Scroll.astro';
@@ -6,11 +9,8 @@ import Insights from '@/components/Insights.astro';
 ---
 
 <MainLayout>
-  <main
-    class="mx-auto flex min-h-screen w-full max-w-screen-sm flex-col overflow-x-hidden"
-  >
+  <main class="mx-auto flex min-h-screen w-screen flex-col overflow-x-hidden">
     <Hero />
     <Scroll />
-    <Insights />
   </main>
 </MainLayout>
