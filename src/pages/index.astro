@@ -4,13 +4,24 @@ import { Button } from '@components/ui/button';
 
 import MainLayout from '@/layouts/MainLayout.astro';
 import Hero from '@/components/Hero.astro';
-import Scroll from '@/components/Scroll.astro';
 import Insights from '@/components/Insights.astro';
+import Pricing from '@/components/Pricing.astro';
+import Subscribe from '@/components/Subscribe.astro';
 ---
 
 <MainLayout>
   <main class="mx-auto flex min-h-screen w-screen flex-col overflow-x-hidden">
     <Hero />
-    <Scroll />
+    <Insights />
+    <Pricing />
+    <div class="group relative mx-auto mb-8 w-fit rounded-3xl">
+      <Button className="text-md rounded-3xl">Start for Free</Button>
+      <div
+        class="absolute inset-0 -z-10 h-full w-full rounded-3xl bg-primary blur-sm duration-1000 group-hover:blur"
+      >
+      </div>
+    </div>
+
+    <Subscribe />
   </main>
 </MainLayout>
